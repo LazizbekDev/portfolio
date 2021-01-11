@@ -1,0 +1,41 @@
+.context {
+    position: absolute;
+    background-color: rgba(6, 19, 31, 0.911);
+    border-radius:4px;
+    color: #fff;
+    width: 150px;
+    z-index: 999999999;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: .2s ease;
+    overflow: hidden;
+    hr{
+        line-height: -1px;
+        padding: 0;margin: 5px 0;
+    }
+    .items{
+        padding: 4px 8px;
+        font-size: 14px;
+        &:hover {
+            background-color: rgba(15, 123, 138, 0.74);
+        }
+    }
+    &.active{
+        transform: scale(1);
+        animation-name: gif;
+        animation-duration:.2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+}
+@keyframes gif{
+    0%{
+        transform: scale(0)
+    }
+    70%{
+        transform: scale(1.5)
+    }
+    100%{
+        transform: scale(1)
+    }
+}

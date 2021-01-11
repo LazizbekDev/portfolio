@@ -1,0 +1,45 @@
+.for-center{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 130vh;
+    z-index: 999999999;
+    background-color: #0c0c0c;
+    animation-name: fade;
+    #main {
+        word-wrap: break-word;
+        top: 10%;
+        left: 10%;
+        color: rgb(250, 250, 250);
+        font-weight: bolder;
+        #pow-txt{
+            color:#69c9d0;
+        }
+        #tagline{
+            color: rgba(0, 190, 16, 0.959);
+        }
+    }
+}
+.opaxy{
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    width: 0;
+    height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+@keyframes fade{
+    0%,70%{
+        opacity: 1;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+    }
+    100%{
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
